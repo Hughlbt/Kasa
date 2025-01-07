@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'; // Exemple de page
-import About from './pages/About'; // Exemple de page
-import NotFound from './pages/NotFound'; // Page pour les routes non trouvées
+import Home from './pages/Home'; 
+import About from './pages/About'; 
+import NotFound from './pages/NotFound'; 
+import Header from './Header';
 
 const AppRouter = () => {
   return (
