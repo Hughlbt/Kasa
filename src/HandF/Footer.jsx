@@ -1,7 +1,9 @@
+import './Footer.scss';
+
 const Footer = () => {
   return (
-    <header>
-      <h2>Kasa</h2>
+    <header className="main-footer">
+      <img src="/pictures/Logo/Footer.png" alt="logo" />
       <p>2020 Kasa - All rights reserved</p>
     </header>
   );
