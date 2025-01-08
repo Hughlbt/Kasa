@@ -1,7 +1,11 @@
+ import Banner from '../components/Banner_about';
+import './About.scss';
+
 const About = () => {
   return (
     <div>
-      <h2>A propos</h2>
+       <Banner
+        backgroundImage="/pictures/Banner_about.png" />
     </div>
   );
 };

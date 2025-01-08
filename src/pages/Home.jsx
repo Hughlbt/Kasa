@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'; 
-import Banner from '../components/Banner';
+import Banner from '../components/Banner_home';
 import Card from '../components/Card';
 import './Home.scss';
 
@@ -17,7 +17,7 @@ const Home = () => {
     <div>
       <Banner 
         title="Chez vous, partout et ailleurs" 
-        backgroundImage="/pictures/Banner.png" 
+        backgroundImage="/pictures/Banner_home.png" 
       />
       <div className="card-list">
         {cardData.map((item) => (
