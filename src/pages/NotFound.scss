@@ -1,0 +1,32 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+
+    h1 {
+        color: #FF6060;
+        font-size: 200px;
+        margin: 130px 0px 50px 0px;
+    }
+
+    h2 {
+        color: #FF6060;
+        font-size: 30px;
+        margin-bottom: 100px;
+    }
+
+    nav {
+        margin-bottom: 130px;
+
+        a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
