@@ -1,0 +1,52 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  
+  
+    .collapse {
+      width: 90%;
+      margin-bottom: 15px; 
+
+      .collapse-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FF6060;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+  
+        .collapse-title {
+          font-weight: bold;
+        }
+  
+        .collapse-toggle {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }      
+      }
+  
+      .collapse-content {
+        width: 100%;
+        overflow: hidden;  
+        max-height: 0; 
+        transition: max-height 0.1s ease;
+        color: black;
+        background-color: #e6e6e6;
+        border-radius: 5px;
+  
+        &.open {
+          max-height: 500px;  
+          padding: 10px; 
+        }
+      }
+    }
+  }
+  
