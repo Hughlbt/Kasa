@@ -10,8 +10,6 @@ function Card({ title}) {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
- 
- 
 };
 
 export default Card;

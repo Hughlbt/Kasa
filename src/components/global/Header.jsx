@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import './Header.scss';
+import '../../style/header.scss';
 const Header = () => {
   return (
     <header className="main-header">
-      <img src="/pictures/Logo/Header.png" alt="logo" />
+      <img src="/pictures/logo/header.png" alt="logo" />
       <nav>
         <Link to="/home">Accueil</Link>
         <Link to="/about">A propos</Link>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'; 
-import Banner from '../components/Banner_home';
+import Banner from '../components/Banner';
 import Card from '../components/Card';
-import './Home.scss';
+import '../style/home.scss';
 
 const Home = () => {
   const cardData = [
@@ -17,11 +17,11 @@ const Home = () => {
     <div>
       <Banner 
         title="Chez vous, partout et ailleurs" 
-        backgroundImage="/pictures/Banner_home.png" 
+        backgroundImage="/pictures/banner_home.png" 
       />
       <div className="card-list">
         {cardData.map((item) => (
-          <Link key={item.id} to={`/location/${item.id}`} className="card-link"> 
+          <Link key={item.id} to={`/logement/${item.id}`} className="card-link"> 
             <Card 
               title={item.title} 
               image={item.image} 
