@@ -1,29 +1,46 @@
 import '../style/logement.scss';
 import Collapse from "../components/Collapse";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 const Logement = () => {
-    return (
-        
-      <div className='logement-page'>
-        <div className='collapse-banner'>
-        <Collapse title="Description">
-        <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants.
-            Au coeur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. 
-            Vous êtes à 1 station de la gare de l'est (7minutes à pied).
-        </p>
-        </Collapse>
-        <Collapse title="Equipements">
-        <li>Climatisation</li>
-        <li>Wi-Fi</li>
-        <li>Cuisine</li>
-        <li>Espace de travail</li>
-        <li>Fer à repasser</li>
-        <li>Sèche-cheveux</li>
-        <li>Cintres</li>
-        </Collapse>
-        </div>
-        </div>
+  const { id } = useParams();
+  const [annonce, setAnnonce] = useState(null);
+
+  useEffect(() => {
+    fetch('/annonces.json')
+      .then((response) => response.json())
+      .then((data) => {
+        const foundAnnonce = data.find((item) => item.id === id);
+        setAnnonce(foundAnnonce);
+      })
+      .catch((error) => console.error('Erreur lors de la récupération de l\'annonce:', error));
+  }, [id]);
+
+  if (!annonce) return <p>Chargement...</p>;
+
+  return (
+    <div className="logement-page">
+      <img src={annonce.cover} alt={annonce.title} />
+      <h1>{annonce.title}</h1>
+      <p>{annonce.location}</p>
+      <tag>{annonce.tags}</tag>
+      <rate>{annonce.rating}</rate>
+      <name>{annonce.host.name}</name>
+      <img src={annonce.host.picture} alt={annonce.host.name} />
       
-      );
-    };
-  
-  export default Logement;
+      <Collapse title="Équipements">
+        <ul>
+          {annonce.equipments.map((equipement, index) => (
+            <li key={index}>{equipement}</li>
+          ))}
+        </ul>
+      </Collapse>
+      <Collapse title="Description">
+      <p>{annonce.description}</p>
+      </Collapse>
+    </div>
+  );
+};
+
+export default Logement;
