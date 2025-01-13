@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <Banner 
         title="Chez vous, partout et ailleurs" 
-        backgroundImage="/pictures/banner_home.png" 
+        backgroundImage="/pictures/banner-home.png" 
       />
       <div className="card-list">
         {annonces.map((item) => (

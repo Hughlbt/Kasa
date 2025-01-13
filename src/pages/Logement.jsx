@@ -21,24 +21,50 @@ const Logement = () => {
 
   return (
     <div className="logement-page">
-      <img src={annonce.cover} alt={annonce.title} />
-      <h1>{annonce.title}</h1>
-      <p>{annonce.location}</p>
-      <tag>{annonce.tags}</tag>
-      <rate>{annonce.rating}</rate>
-      <name>{annonce.host.name}</name>
-      <img src={annonce.host.picture} alt={annonce.host.name} />
+      <img src={annonce.cover} alt={annonce.title} className="logement-cover" />
+
+      <div className="logement-header">
+        <div>
+          <h1>{annonce.title}</h1>
+          <p>{annonce.location}</p>
+          <div className="tags">
+            {annonce.tags.map((tag, index) => (
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="host-info">
+          <div className="host-details">
+            <span className="host-name">{annonce.host.name}</span>
+            <img src={annonce.host.picture} alt={annonce.host.name} className="host-picture" />
+          </div>
+          <div className="rating">
+  {Array.from({ length: 5 }, (_, index) => (
+    <img
+      key={index}
+      src={index < annonce.rating ? "/pictures/picto/star-filled.svg" : "/pictures/picto/star.svg"}
+      alt={index < annonce.rating ? "Étoile remplie" : "Étoile vide"}
+      width="20"  
+      height="20" 
+    />
+  ))}
+</div>
+
+        </div>
+      </div>
+
       <div className="collapse-container">
-      <Collapse title="Équipements">
-        <ul>
-          {annonce.equipments.map((equipement, index) => (
-            <li key={index}>{equipement}</li>
-          ))}
-        </ul>
-      </Collapse>
-      <Collapse title="Description">
-      <p>{annonce.description}</p>
-      </Collapse>
+        <Collapse title="Description">
+          <p>{annonce.description}</p>
+        </Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {annonce.equipments.map((equipement, index) => (
+              <li key={index}>{equipement}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );

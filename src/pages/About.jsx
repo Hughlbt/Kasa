@@ -7,7 +7,7 @@ const About = () => {
     <>
     <div className='about-page'>
        <Banner
-        backgroundImage="/pictures/banner_about.png" />
+        backgroundImage="/pictures/banner-about.png" />
     <div className='collapse-banner'>
     <Collapse title="Fiabilité">
     <p>Les annonces postées sur Kasa garantissent une fiablilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>

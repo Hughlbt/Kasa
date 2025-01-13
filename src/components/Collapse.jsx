@@ -13,7 +13,12 @@ const Collapse = ({ title, children }) => {
           <div className="collapse-header">
             <span className="collapse-title">{title}</span>
             <button className="collapse-toggle" onClick={toggleCollapse}>
-              {isOpen ? "▼" : "▲"}
+            <img 
+                src={isOpen ? "/pictures/picto/down-arrow.svg" : "/pictures/picto/up-arrow.svg"} 
+                alt={isOpen ? "Flèche vers le bas" : "Flèche vers le haut"} 
+                width="25" 
+                height="25"
+              />
             </button>
           </div>
           <div className={`collapse-content ${isOpen ? "open" : ""}`}>
