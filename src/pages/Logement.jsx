@@ -1,11 +1,12 @@
 import '../style/logement.scss';
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Logement = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [annonce, setAnnonce] = useState(null);
 
   useEffect(() => {
@@ -13,10 +14,14 @@ const Logement = () => {
       .then((response) => response.json())
       .then((data) => {
         const foundAnnonce = data.find((item) => item.id === id);
-        setAnnonce(foundAnnonce);
+        if (foundAnnonce) {
+          setAnnonce(foundAnnonce);
+        } else {
+          navigate('/error');
+        }
       })
       .catch((error) => console.error('Erreur lors de la récupération de l\'annonce:', error));
-  }, [id]);
+  }, [id, navigate]);  
 
   if (!annonce) return <p>Chargement...</p>;
 
