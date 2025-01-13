@@ -1,5 +1,6 @@
 import '../style/logement.scss';
 import Collapse from "../components/Collapse";
+import Slideshow from "../components/Slideshow";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -21,7 +22,8 @@ const Logement = () => {
 
   return (
     <div className="logement-page">
-      <img src={annonce.cover} alt={annonce.title} className="logement-cover" />
+       <Slideshow pictures={annonce.pictures} />
+      
 
       <div className="logement-header">
         <div>
