@@ -28,7 +28,7 @@ const Logement = () => {
       <rate>{annonce.rating}</rate>
       <name>{annonce.host.name}</name>
       <img src={annonce.host.picture} alt={annonce.host.name} />
-      
+      <div className="collapse-container">
       <Collapse title="Équipements">
         <ul>
           {annonce.equipments.map((equipement, index) => (
@@ -39,6 +39,7 @@ const Logement = () => {
       <Collapse title="Description">
       <p>{annonce.description}</p>
       </Collapse>
+      </div>
     </div>
   );
 };

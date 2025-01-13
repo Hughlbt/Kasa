@@ -5,9 +5,34 @@
     justify-content: center;
     padding: 20px;
 
+    h1 {
+        color: #FF6060;
+        align-self: flex-start;
+    }
+
+    p {
+        align-self: flex-start;
+    }
+
+    tag {
+        align-self: flex-start;
+        background-color: #FF6060;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .collapse-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .collapse {
-        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         margin-bottom: 15px;
 
         .collapse-header {
