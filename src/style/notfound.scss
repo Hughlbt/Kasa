@@ -15,6 +15,7 @@
         color: #FF6060;
         font-size: 30px;
         margin-bottom: 100px;
+        font-weight: normal;
     }
 
     nav {
@@ -33,4 +34,19 @@
 
 @media (max-width: 1024px) {}
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+
+    .notfound {
+        h1 {
+            font-size: 130px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: normal;
+        }
+    }
+}
