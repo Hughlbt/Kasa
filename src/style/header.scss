@@ -1,7 +1,6 @@
 .main-header {
   display: flex;
   align-items: center;
-  ;
   justify-content: space-between;
   background-color: white;
   color: white;
@@ -26,6 +25,41 @@
 
       &:hover {
         border-bottom: 2px solid black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-header {
+    img {
+      margin-left: 50px;
+    }
+
+    nav {
+      margin-right: 50px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .main-header {
+    width: 100%;
+    padding: 5px;
+
+    img {
+      width: 145px;
+      height: 46.88px;
+      margin-left: 10px;
+    }
+
+    nav {
+      margin-right: 0px;
+      gap: 0px;
+
+      a {
+        font-size: 14px;
       }
     }
   }

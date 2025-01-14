@@ -4,3 +4,14 @@
   padding: 10px;
   text-align: center;
 }
+
+@media (max-width: 767.98px) {
+  .main-footer {
+
+    p {
+      margin-left: 30%;
+      margin-right: 30%;
+    }
+  }
+
+}
