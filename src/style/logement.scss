@@ -3,15 +3,17 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
+    min-height: 100vh;
 
     .slideshow {
         position: relative;
         width: 100%;
-        max-width: 600px;
+        max-width: none;
+        height: 500px;
         margin: 0 auto;
-
 
         .slideshow-image {
             width: 100%;
@@ -63,6 +65,7 @@
         justify-content: space-between;
         width: 100%;
         margin-top: 20px;
+        margin-bottom: 40px;
 
         h1 {
             color: #FF6060;
@@ -120,7 +123,6 @@
                     &.filled {
                         color: #FF6060;
                         background-image: url('/pictures/picto/star-filled.svg');
-
                     }
                 }
             }
@@ -133,6 +135,7 @@
         width: 100%;
         margin-top: 20px;
 
+
         .collapse {
             width: 45%;
             margin-bottom: 15px;
@@ -143,9 +146,10 @@
                 align-items: center;
                 background-color: #FF6060;
                 color: white;
-                width: 100%;
+                width: 96%;
                 padding: 10px;
                 border-radius: 10px;
+
 
                 .collapse-title {
                     font-weight: bold;
@@ -168,6 +172,7 @@
                 color: black;
                 background-color: #e6e6e6;
                 border-radius: 5px;
+                box-sizing: border-box;
 
                 &.open {
                     max-height: 500px;
@@ -175,5 +180,74 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .logement-header {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .slideshow {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .slide-number-container {
+        display: none;
+    }
+
+    .slideshow-controls .prev img,
+    .slideshow-controls .next img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        position: relative;
+    }
+
+    .tags {
+        width: 100%;
+    }
+
+    .host-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .host-details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rating {
+        display: flex;
+        gap: 5px;
+    }
+
+    .collapse-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .collapse {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .collapse-header {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
     }
 }

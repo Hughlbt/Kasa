@@ -48,8 +48,27 @@
 
             &.open {
                 max-height: 500px;
-                padding: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-page .collapse {
+        width: 95% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .collapse-header {
+        height: 40px !important;
+    }
+
+    .collapse-content {
+        width: 95% !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
