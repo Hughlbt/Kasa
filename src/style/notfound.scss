@@ -38,8 +38,12 @@
 
     .notfound {
         h1 {
-            font-size: 130px;
+            position: relative;
+            left: 0;
+            right: 0;
+            font-size: 130px !important;
             text-align: center;
+            font-weight: bold;
             margin-top: 80px;
         }
 

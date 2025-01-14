@@ -69,14 +69,16 @@
 
         h1 {
             color: #FF6060;
-            font-size: 30px;
+            font-size: 40px;
             font-weight: normal;
+            margin-bottom: 10px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 20px;
 
             .tag {
                 background-color: #FF6060;
@@ -137,7 +139,7 @@
 
 
         .collapse {
-            width: 45%;
+            width: 48%;
             margin-bottom: 15px;
 
             .collapse-header {
@@ -146,7 +148,7 @@
                 align-items: center;
                 background-color: #FF6060;
                 color: white;
-                width: 96%;
+                width: auto;
                 padding: 10px;
                 border-radius: 10px;
 
@@ -170,7 +172,7 @@
                 max-height: 0;
                 transition: max-height 0.1s ease;
                 color: black;
-                background-color: #e6e6e6;
+                background-color: #F6F6F6;
                 border-radius: 5px;
                 box-sizing: border-box;
 
@@ -183,71 +185,114 @@
     }
 }
 
+
+@media (max-width: 1024px) {
+    .logement-page {
+        .slideshow {
+            position: relative;
+            width: 100%;
+            max-width: none;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .logement-header {
+            h1 {
+                font-size: 21px;
+            }
+        }
+    }
+
+}
+
 @media (max-width: 767.98px) {
-    .logement-header {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
 
-    .slideshow {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-    }
+    .logement-page {
 
-    .slide-number-container {
-        display: none;
-    }
 
-    .slideshow-controls .prev img,
-    .slideshow-controls .next img {
-        width: 40px;
-        height: 40px;
-    }
+        .slideshow {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            height: 290px;
 
-    h1 {
-        position: relative;
-    }
+            .slide-number-container {
+                display: none;
+            }
 
-    .tags {
-        width: 100%;
-    }
+            .slideshow-controls .prev img,
+            .slideshow-controls .next img {
+                width: 40px;
+                height: 40px;
+            }
+        }
 
-    .host-info {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        align-items: center;
-    }
+        .logement-header {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
 
-    .host-details {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
 
-    .rating {
-        display: flex;
-        gap: 5px;
-    }
+            h1 {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
 
-    .collapse-container {
-        flex-direction: column;
-        width: 100%;
-    }
+            .tags {
+                width: 100%;
 
-    .collapse {
-        width: 100%;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+                .tag {
+                    font-size: 12px;
+                }
+            }
 
-    .collapse-header {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
+            .host-info {
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .rating {
+                justify-content: flex-start;
+                padding-bottom: 20px;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+
+            .host-details {
+                display: flex;
+            }
+        }
+
+        .collapse-container {
+            display: flex;
+            flex-direction: column;
+
+            .collapse {
+                width: 100%;
+                box-sizing: border-box;
+
+
+                .collapse-header {
+                    width: 100%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+            }
+
+            .collapse-content {
+                width: 100% !important;
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+        }
     }
 }

@@ -43,7 +43,9 @@ const Logement = () => {
 
         <div className="host-info">
           <div className="host-details">
-            <span className="host-name">{annonce.host.name}</span>
+          <span className="host-name">
+                {annonce.host.name.split(" ")[0]}<br />{annonce.host.name.split(" ")[1]}
+          </span>
             <img src={annonce.host.picture} alt={annonce.host.name} className="host-picture" />
           </div>
           <div className="rating">
