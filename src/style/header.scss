@@ -5,9 +5,12 @@
   background-color: white;
   color: white;
   padding: 20px;
+  font-family: Montserrat;
+
 
   img {
-    height: 50px;
+    width: 15%;
+    height: 100%;
     margin-left: 120px;
   }
 
@@ -59,7 +62,7 @@
       gap: 0px;
 
       a {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }

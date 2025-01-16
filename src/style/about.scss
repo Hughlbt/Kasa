@@ -3,17 +3,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: Montserrat;
 
     .collapse-container {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 0 10px;
+        gap: 30px;
+        margin-bottom: 30px;
+        margin-top: 10px;
     }
 
     .collapse {
         width: 70%;
-        margin: 0 auto 15px auto;
+        margin: 0 auto 0 auto;
         display: flex;
         flex-direction: column;
         align-self: stretch;
@@ -32,6 +35,11 @@
                 font-weight: bold;
             }
 
+            img {
+                width: 32px;
+                height: 32px;
+            }
+
             .collapse-toggle {
                 background: none;
                 border: none;
@@ -47,21 +55,40 @@
             max-height: 0;
             transition: max-height 0.1s ease;
             color: black;
-            background-color: #e6e6e6;
+            background-color: #F6F6F6;
             border-radius: 5px;
+            font-size: 20px;
 
             &.open {
                 max-height: 500px;
-                padding-left: 10px;
-                padding-right: 10px;
+                padding: 10px;
             }
         }
     }
+}
 
-    @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
+
+    .about-page {
+
+        .collapse-container {
+            width: 89.5%;
+            gap: 20px;
+        }
+
         .collapse {
-            width: 90%;
-            margin: 0 auto 15px auto;
+            width: 100%;
+            padding: 0;
+
+            .collapse-header {
+                width: 100%;
+                padding: 0px;
+
+                .collapse-title {
+                    font-size: 13px;
+                    padding-left: 10px;
+                }
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 import Banner from '../components/Banner';
-import '../style/about.scss';
 import Collapse from "../components/Collapse";
+import '../style/about.scss';
+
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
        <Banner
        title=""
        backgroundImage="/pictures/banner-about.png" />
-    <div className='collapse-container'>
+      <div className='collapse-container'>
     <Collapse title="Fiabilité">
     <p>Les annonces postées sur Kasa garantissent une fiablilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
     </Collapse>
@@ -25,7 +26,7 @@ const About = () => {
       En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés.
       Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
     </Collapse>
-    </div>
+      </div>
     </div>
     </>
   );

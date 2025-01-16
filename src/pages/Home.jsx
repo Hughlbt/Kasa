@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className='home'>
       <Banner 
         title="Chez vous, partout et ailleurs" 
         backgroundImage="/pictures/banner-home.png" 

@@ -1,5 +1,5 @@
 import AppRouter from './Router';
-import './style/app.scss'; 
+import './style/app.scss';
 
 const App = () => {
   return (

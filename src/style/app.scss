@@ -129,11 +129,12 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: white;
+html {
+  height: 100%;
 }
 
-.container {
-  margin: 20px;
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: white;
 }

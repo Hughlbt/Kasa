@@ -1,12 +1,13 @@
 .card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 50px;
   background-color: #F6F6F6;
-  width: 80%;
+  width: 82%;
   margin: 50px auto;
   padding: 60px 30px 50px 30px;
-  border-radius: 50px;
+  border-radius: 25px;
+  font-family: Montserrat;
 }
 
 .card-link {
@@ -14,14 +15,18 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  width: 95%;
+  height: 340px;
+
 }
 
 .card {
   position: relative;
   border-radius: 10px;
-  margin-bottom: 20px;
-  width: 80%;
-  height: 285px;
+  width: 100%;
+  height: 340px;
+
+
 
   .card-image {
     width: 100%;
@@ -46,9 +51,34 @@
 
 
 @media (max-width: 1024px) {
-  .card {
-    width: 90%;
+
+  .home {
+    place-items: center;
+  }
+
+  .card-list {
+    place-items: center;
+    gap: 30px;
+    background-color: #F6F6F6;
+    padding: 30px 20px 15px 30px;
+    margin: 30px 0 30px 0px;
+    width: 88.5%;
+
+  }
+
+  .card-link {
+    width: 100%;
     height: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -56,13 +86,33 @@
   .card-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    gap: 22px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  .card-link {
+    width: 100%;
+    height: 100%;
   }
 
   .card {
-    height: 200px;
-  }
-
-  .card-image {
+    width: 89.5%;
     height: 100%;
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
