@@ -4,22 +4,31 @@
     justify-content: center;
     align-items: center;
     font-family: Montserrat;
+    gap: 139px;
 
     h1 {
         color: #FF6060;
-        font-size: 200px;
-        margin: 130px 0px 50px 0px;
+        font-size: 288px;
+        font-weight: 700;
+        line-height: 410.69px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
     }
 
     h2 {
         color: #FF6060;
-        font-size: 30px;
-        margin-bottom: 100px;
-        font-weight: normal;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51.34px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
     }
 
     nav {
-        margin-bottom: 130px;
+        font-size: 18px;
+        margin-bottom: 139px;
 
         a {
             color: black;
@@ -32,25 +41,59 @@
     }
 }
 
-@media (max-width: 1024px) {}
-
-@media (max-width: 767.98px) {
+@media (max-width: 1024px) {
 
     .notfound {
         h1 {
-            position: relative;
-            left: 0;
-            right: 0;
-            font-size: 130px !important;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 80px;
+            font-size: 288px !important;
         }
 
         h2 {
-            font-size: 25px;
-            text-align: center;
-            font-weight: normal;
+            font-size: 30px !important;
         }
     }
+}
+
+@media (max-width: 767.98px) {
+    .notfound {
+        margin-top: 113px;
+        gap: 113px;
+
+        h1 {
+            width: 198px;
+            height: 99px;
+            gap: 0px;
+            opacity: 0px;
+            position: relative;
+            font-size: 96px !important;
+            font-weight: 700;
+            line-height: 136.9px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        h2 {
+            width: 260px;
+            height: 52px;
+            font-size: 18px !important;
+            font-weight: 500;
+            line-height: 25.67px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        nav {
+            margin-bottom: 113px;
+        }
+    }
+
+    .notfound h2 .break::after {
+        content: "\a";
+        white-space: pre;
+        display: inline;
+    }
+
+
 }
