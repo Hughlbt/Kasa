@@ -80,11 +80,9 @@ const Logement = () => {
           <p>{annonce.description}</p>
         </Collapse>
         <Collapse title="Équipements">
-          <ul>
             {annonce.equipments.map((equipement, index) => (
-              <li key={index}>{equipement}</li>
+              <ul key={index}>{equipement}</ul>
             ))}
-          </ul>
         </Collapse>
       </div>
     </div>
