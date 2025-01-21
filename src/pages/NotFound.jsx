@@ -8,7 +8,7 @@ const Notfound = () => {
   Oups! La page <span className="break">que</span> vous demandez n'existe pas
         </h2>
         <nav>
-            <Link to="/home">Retourner sur la page d&apos;accueil</Link>
+            <Link to="/">Retourner sur la page d&apos;accueil</Link>
         </nav>
       </div>
     );
